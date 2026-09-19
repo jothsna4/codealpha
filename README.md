@@ -1,38 +1,53 @@
-# Simple E-Commerce Store
+# ProjectFlow — Project Management Tool
 
-## Technologies
-- HTML
-- CSS
-- JavaScript
-- Node.js
-- Express.js
-- SQLite
+A full-stack Trello/Asana-style internship project.
 
 ## Features
-1. Product listing
-2. Product details
-3. Shopping cart
-4. User registration
-5. User login
-6. Order processing
-7. Order history
-8. Database for users, products and orders
+- User registration and JWT authentication
+- Login/logout
+- Create group projects
+- Add registered members by email
+- Project boards with To Do / In Progress / Done columns
+- Create and assign tasks
+- Change task status
+- Task comments
+- SQLite database
+- WebSocket real-time task/comment updates using Socket.IO
+- Responsive UI
 
-## How to run
+## Tech Stack
+Frontend: HTML, CSS, JavaScript
+Backend: Node.js, Express.js
+Database: SQLite (better-sqlite3)
+Authentication: JWT + bcrypt
+Realtime: Socket.IO
 
-1. Install Node.js.
+## Run
+1. Install Node.js LTS.
 2. Open this folder in VS Code.
-3. Open Terminal in VS Code.
+3. Open Terminal.
 4. Run:
+   npm install
+5. Then:
+   npm start
+6. Open:
+   http://localhost:3000
 
-npm install
+Demo login:
+Email: demo@example.com
+Password: password123
 
-5. Then run:
+## Database
+The SQLite database file `project_manager.db` is created automatically after first run.
 
-npm start
+## Internship presentation
+Explain the architecture as:
+Browser → Express REST API → SQLite database
+                         ↘ Socket.IO → real-time updates
 
-6. Open Chrome and visit:
-
-http://localhost:3000
-
-The SQLite database file `store.db` is created automatically when the server starts.
+Backend responsibilities:
+- Users/authentication
+- Projects and membership
+- Tasks and assignments
+- Comments
+- Real-time events
